@@ -2,7 +2,7 @@
  * File: jukebox-server.cpp
  *
  * Authors: Matt Willis and Kevin Mcdonald
- *
+ * authors
  * Server for an Internet Jukebox.
  */
 
