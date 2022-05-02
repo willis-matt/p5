@@ -13,14 +13,14 @@ public class AudioClient {
 		BufferedInputStream in = null;
 		Thread player = null;
 
-		System.out.println("Client: Connecting to localhost (127.0.0.1) port 6666");
+		System.out.println("Client: Connecting to args[0] port 6666");
 
 		while (true) {
 			System.out.print(">> ");
 			String command = s.nextLine();
 			if (command.equals("play")) {
 				try {
-					Socket socket = new Socket("127.0.0.1", 6666);
+					Socket socket = new Socket("args[0]", 6666);
 					if (socket.isConnected()) {
 						in = new BufferedInputStream(socket.getInputStream(), 2048);
 						player = new Thread(new AudioPlayerThread(in));
